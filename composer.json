@@ -1,5 +1,5 @@
 {
-    "name": "paragraph_skins",
+    "name": "openy/paragraph_skins",
     "type": "drupal-module",
     "description": "Implement skins for paragraphs by OpenY community",
     "keywords": [
