@@ -86,7 +86,6 @@ class SkinManager extends DefaultPluginManager implements SkinManagerInterface {
     ];
 
     foreach ($definitions as $module_skins) {
-      unset($module_skins['provider'], $module_skins['id']);
       foreach ($module_skins as $skin_definition) {
         if (!isset($skin_definition['paragraph_type']) || $skin_definition['paragraph_type'] != $type_id) {
           continue;

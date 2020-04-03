@@ -114,7 +114,7 @@ function paragraph_skins_preprocess_paragraph(&$variables) {
   $paragraph_name = $variables['paragraph']->getType();
 
   $skin_libraries = Drupal::service('plugin.manager.paragraph_skins')
-    ->getLibraries($variables['paragraph']->getType(), $skin);
+    ->getLibraries($paragraph_name, $skin);
 
   $class = 'ps-' . strtolower($paragraph_name)
     . '-' . str_replace(' ', '-', strtolower($skin));
