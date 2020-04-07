@@ -80,8 +80,15 @@ function paragraph_skins_entity_base_field_info(EntityTypeInterface $entity_type
  * @see options_allowed_values()
  */
 function paragraph_skins_allowed_values_function(FieldStorageDefinitionInterface $definition, FieldableEntityInterface $entity = NULL, &$cacheable = FALSE) {
-  return Drupal::service('plugin.manager.paragraph_skins')
-      ->getSkinsForParagraph($entity->getType());
+  /**
+   * @TODO: fix
+   * can not filter skins by $entity->getType() because entity does not
+   * represent current paragraph being edited.
+   */
+  $skins = Drupal::service('plugin.manager.paragraph_skins')
+      ->getSkinsForParagraph();
+
+  return $skins;
 }
 
 /**
